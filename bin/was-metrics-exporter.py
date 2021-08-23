@@ -28,6 +28,7 @@ import httplib
 
 # Default encoding should be utf-8
 sys.setdefaultencoding('utf8')
+
 # emulate Boolean
 (False, True) = (0, 1)
 
@@ -82,6 +83,7 @@ def getPerfServletData(perfServletUrl, wasUser=None, wasPassword=None):
     except urllib2.URLError as e1:
         errorString = "Fetching performance servlet data failed with: '%s'" % (e1.reason)
         l.error(errorString)
+        l.error("Getting performace servlet data from URL: '%s' using user: '%s' / '%s'" % (perfServletUrl, wasUser, wasPassword))
         rtnString = None
     else:
         rtnString = response.read()

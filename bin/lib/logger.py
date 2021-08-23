@@ -139,7 +139,7 @@ def setLoglevelByName(logLevelName):
 
 
 def printLoglevel():
-    print "current loglevel: %s" % LogLevels().getLogLevelString(LOGLEVEL)
+    print "current loglevel: %s" % getLogLevelString(LOGLEVEL)
 
 
 def getLoglevel():
